@@ -1,0 +1,14 @@
+.loadbtn {
+  padding: 8px 24px;
+  background-color: #2c2f48;
+  font-size: 16px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  /* margin-bottom: 20px; */
+  position: relative;
+  z-index: 999;
+  top: 90px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.loadbtn:hover {
+  background-color: rgb(74, 74, 244);
+}

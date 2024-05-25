@@ -1,0 +1,60 @@
+header {
+  background-color: #2c2f48;
+  padding: 20px;
+  position: fixed;
+  top: 10px;
+  left: 20px;
+  z-index: 1000;
+  width: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.5);
+}
+.formik {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.inputs {
+  padding: 8px 8px 8px 50px;
+  border: 1px solid #ccc;
+  margin-right: 10px;
+  width: 300px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: linear-gradient(
+    180deg,
+    rgba(46, 51, 90, 0.3) 0%,
+    rgba(28, 27, 51, 0.3) 100%
+  );
+}
+
+.btn {
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(15, 15, 15);
+  cursor: pointer;
+  position: absolute;
+  left: 2px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: radial-gradient(
+      70.71% 70.71% at 50% 50%,
+      rgba(255, 255, 255, 0.24) 0%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    rgba(255, 255, 255, 0.04);
+}
+.icon {
+  width: 20px;
+  height: 20px;
+  color: aliceblue;
+}

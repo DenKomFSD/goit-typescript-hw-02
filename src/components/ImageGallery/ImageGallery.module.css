@@ -1,0 +1,48 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  align-items: center;
+  /* margin-top: 70px; */
+  position: relative;
+  top: 70px;
+  padding: 10px;
+  border-radius: 4px;
+  background: rgba(160, 162, 185, 0.15);
+  backdrop-filter: blur(10px);
+}
+
+.container img {
+  object-fit: cover;
+  object-position: top;
+}
+
+.img {
+  box-sizing: content-box;
+  border: none;
+  border-radius: 5px;
+  overflow: hidden;
+  object-fit: cover;
+  object-position: top;
+  aspect-ratio: 1 / 0.55;
+  transition: transform 250ms ease-in-out;
+  display: flex;
+  align-items: center;
+}
+
+.img:hover {
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+/* .img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.img2 {
+  max-width: 300px;
+  max-height: 300px;
+  object-fit: cover;
+} */
