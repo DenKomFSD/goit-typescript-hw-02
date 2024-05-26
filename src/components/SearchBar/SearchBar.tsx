@@ -2,12 +2,16 @@ import { IoIosSearch } from "react-icons/io";
 import { toast } from "react-hot-toast";
 import css from "./SearchBar.module.css";
 
-export default function SearchBar({ onSubmit }) {
-  const onSearch = (event) => {
+interface SearchBarProps {
+  onSubmit: (value: string) => void;
+}
+
+const SearchBar: React.FC<SearchBarProps> = ({ onSubmit }) => {
+  const onSearch = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const form = event.target;
-    const value = form.query.value;
-    console.log(event.target.query);
+    const form = event.currentTarget;
+    const value = form.query.value.trim();
+
     if (!value) {
       toast.error("Your search term is empty", {
         style: {
@@ -37,4 +41,6 @@ export default function SearchBar({ onSubmit }) {
       </form>
     </header>
   );
-}
+};
+
+export default SearchBar;

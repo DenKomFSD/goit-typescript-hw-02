@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "./App.css";
-import { fetchImages } from "./pictures-api";
+import { fetchImages, FetchImagesResponse } from "./pictures-api";
 import Loader from "./components/Loader/Loader";
 import ImageGallery from "./components/ImageGallery/ImageGallery";
 import SearchBar from "./components/SearchBar/SearchBar";
@@ -10,23 +10,23 @@ import LoadMore from "./components/LoadMoreBtn/LoadMoreBtn";
 import ImageModal from "./components/ImageModal/ImageModal";
 
 function App() {
-  const [pics, setPics] = useState([]);
+  const [pics, setPics] = useState<FetchImagesResponse["results"]>([]);
   //add spinner
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
   //error tate
-  const [error, setError] = useState(false);
+  const [error, setError] = useState<boolean>(false);
   //saving current query
-  const [query, setQuery] = useState("");
+  const [query, setQuery] = useState<string>("");
   // page state
-  const [page, setPage] = useState(1);
+  const [page, setPage] = useState<number>(1);
   // modal states
-  const [modalIsOpen, setModalIsOpen] = useState(false);
-  const [modalImageUrl, setModalImageUrl] = useState("");
+  const [modalIsOpen, setModalIsOpen] = useState<boolean>(false);
+  const [modalImageUrl, setModalImageUrl] = useState<string>("");
   // end of collection
-  const [endOfCollection, setEndOfCollection] = useState(false);
-  const [showLoadMore, setShowLoadMore] = useState(true);
+  const [endOfCollection, setEndOfCollection] = useState<boolean>(false);
+  const [showLoadMore, setShowLoadMore] = useState<boolean>(true);
 
-  const openModal = (imageUrl) => {
+  const openModal = (imageUrl: string) => {
     setModalImageUrl(imageUrl);
     setModalIsOpen(true);
   };
@@ -35,7 +35,7 @@ function App() {
     setModalIsOpen(false);
   };
 
-  const handleSubmit = async (newQuery) => {
+  const handleSubmit = async (newQuery: string) => {
     setQuery(newQuery);
     setPage(1);
     setPics([]);
