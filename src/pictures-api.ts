@@ -8,6 +8,7 @@ interface UnsplashImage {
   urls: {
     small: string;
     full: string;
+    regular: string;
   };
   alt_description: string;
 }

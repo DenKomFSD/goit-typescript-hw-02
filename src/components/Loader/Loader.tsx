@@ -1,6 +1,10 @@
 import { MutatingDots } from "react-loader-spinner";
 
-export default function Loader({ isLoading }) {
+interface AppProps {
+  isLoading: boolean;
+}
+
+const Loader: React.FC<AppProps> = ({ isLoading }) => {
   return (
     <MutatingDots
       visible={isLoading}
@@ -14,4 +18,5 @@ export default function Loader({ isLoading }) {
       wrapperClass=""
     />
   );
-}
+};
+export default Loader;
